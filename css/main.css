@@ -65,7 +65,7 @@ p {
 }
 
 /*IMAGES*/
-#bridesmaids-groomsmen > .img-container { width: 350px; border: 1px solid red; }
+#bridesmaids > .img-container, #groomsmen  > .img-container { width: 350px; }
 
 .img {
 	background-position: center;
@@ -81,20 +81,20 @@ p {
 #parents-container > div:nth-of-type(1) > div { background-image: url('../img/amy-julie.jpg'); }
 #parents-container > div:nth-of-type(2) > div { background-image: url('../img/lisa-julie.jpg'); }
 /*bridesmaids*/
-#bridesmaids-groomsmen > div:nth-of-type(1) > div { background-image: url('../img/amy-julie.jpg'); }
-#bridesmaids-groomsmen > div:nth-of-type(2) > div { background-image: url('../img/lisa-julie.jpg'); }
-#bridesmaids-groomsmen > div:nth-of-type(3) > div { background-image: url('../img/heidi-julie4.jpg'); }
-#bridesmaids-groomsmen > div:nth-of-type(4) > div { background-image: url('../img/katie-erik.jpg'); }
-#bridesmaids-groomsmen > div:nth-of-type(5) > div { background-image: url('../img/sara-erik.jpg'); }
+#bridesmaids > div:nth-of-type(1) > div { background-image: url('../img/amy-julie.jpg'); }
+#bridesmaids > div:nth-of-type(2) > div { background-image: url('../img/lisa-julie.jpg'); }
+#bridesmaids > div:nth-of-type(3) > div { background-image: url('../img/heidi-julie4.jpg'); }
+#bridesmaids > div:nth-of-type(4) > div { background-image: url('../img/katie-erik.jpg'); }
+#bridesmaids > div:nth-of-type(5) > div { background-image: url('../img/sara-erik.jpg'); }
 /*groomsmen*/
-#bridesmaids-groomsmen > div:nth-of-type(6) > div { background-image: url('../img/dad-erik.jpg'); }
-#bridesmaids-groomsmen > div:nth-of-type(7) > div { background-image: url('../img/placeholder-erik.jpg'); }
-#bridesmaids-groomsmen > div:nth-of-type(8) > div { background-image: url('../img/placeholder-erik.jpg'); }
-#bridesmaids-groomsmen > div:nth-of-type(9) > div { background-image: url('../img/placeholder-erik.jpg'); }
-#bridesmaids-groomsmen > div:nth-of-type(10) > div { background-image: url('../img/placeholder-erik.jpg'); }
+#groomsmen > div:nth-of-type(1) > div { background-image: url('../img/dad-erik.jpg'); }
+#groomsmen > div:nth-of-type(2) > div { background-image: url('../img/placeholder-erik.jpg'); }
+#groomsmen > div:nth-of-type(3) > div { background-image: url('../img/placeholder-erik.jpg'); }
+#groomsmen > div:nth-of-type(4) > div { background-image: url('../img/placeholder-erik.jpg'); }
+#groomsmen > div:nth-of-type(5) > div { background-image: url('../img/placeholder-erik.jpg'); }
 
 
-#bridesmaids-groomsmen > div { display: inline-block; }
+#bridesmaids > div, #groomsmen > div { display: inline-block; }
 
 li {
 	list-style: none;
