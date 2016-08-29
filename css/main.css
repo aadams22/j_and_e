@@ -107,7 +107,7 @@ table {
 }
 
 tr:nth-child(odd) { background-color: #dce3e7; }
-td { padding: .25 .5em; }
+td { padding: .5em 1em; }
 
 
 li {
