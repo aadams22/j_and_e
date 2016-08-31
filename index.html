@@ -1,18 +1,21 @@
 <html>
 <head>
 	<title>Julie and Eric</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="icon" type="image/png" href="./img/favicon.jpg">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/intro.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASzNw-prZz4_SEa1y2B4alg9JJRn9vm7A&callback=initMap" async defer></script>
+
 </head>
 <body>
 	<header>
 		<ul>
-			<li><a href="#timeline">Timeline</a></li>
+			<li><a href="#j-e">The Couple</a></li>
 			<li><a href="#wedding-party">The Wedding Party</a></li>
 			<li><a href="#j-e"><span>J & E</span></a></li>
 			<li><a href="#schedule">The Schedule</a></li>
@@ -30,13 +33,10 @@
 		<hr>
 		<div class="img"></div>
 		<h4>Erik Glen Detlefsen, born August, 6 1986 in Minnesota <br> & <br>Julie Christine Chamberlain, born September 20, 1989 in Edina, Minnesota <br> will be wed on December 17, 2016 <br> at the Wesley Center, Minneapolis, Minnesota <br> at 4:30pm. </h4>
-		<p>Their dating story. If it smells like fish eat as much as you wish damn that dog but cats making all the muffins or claws in your leg scratch leg; meow for can opener to feed me or burrow under covers, so leave hair everywhere. Scream at teh bath. Refuse to leave cardboard box always hungry for climb leg, and need to chase tail human is washing you why halp oh the horror flee scratch hiss bite or jump off balcony, onto stranger's head. Chew on cable curl up and sleep on the freshly laundered towels and sun bathe. Lick butt and make a weird face favor packaging over toy, so spit up on light gray carpet instead of adjacent linoleum eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap, tuxedo cats always looking dapper. </p>
+		<p>Their dating story. In October of 2015 Julie's cousin, Sam Fredin, asked Julie's permission to introduce her to someone. Julie, not thinking much of the proposition said, "sure". She had almost forgotten about it when she was introduced to Erik Detlefsen. They exchanged messages for a week. When he asked her if they could meet, she looked at her schedule and thought to herself, "if we actually meet, it will be a miricle." As her schedule stood then, she had three obscure times to meet. Erik made it happen. They set their first date for a lovely Sunday evening in autumn. At the Gutherie Theater they ran into mutual friends. The evening ran late as the group chatted, removing all awkwardness that can surround a first date. The continued to keep in touch after their date. A week later, Julie, the jet-setter and adventuerer was sitting in a hotel, having gone away for the weekend. A relization came upon her that she had no desire to be anywhere but in Minneapolis spending time with Erik. Though they both keep inhumanly busy schedules, making time for one another seemed natural. Their hobbies and lifestyles fit perfectly together: one evening they would be dressing up and enjoying the city, the next evening they would be down in Florida golfing, another evening they would be driving up to watch the northern lights. Both families welcomed the buding relationship, accepting the other into their family. On a weekend in July, Erik's family was going up north to Canada. Julie, having just started a new job didn't think Erik would propose to her until things had settled down. All weekend, Erik carried around the ring looking for the right moment. It never came. As the two drove home together they stopped at the same spot they had their first opened up to one another with deep conversation under the northern lights. Julie sat on the back of the truck, although there were no northern lights that evening, Erik couldn't wait another moment. He knelt down in front of her and asked Julie if she would spend the rest of her life with him. She said, "yes."</p>
 		
 	</section>
-	<section id="timeline">
-		<h2>The Timeline</h2>
-		<hr>
-	</section>
+
 	<section id="wedding-party">
 		<h2>The Wedding Party</h2>
 		<hr>
@@ -60,7 +60,7 @@
 		</div>
 		<div class="img-container">
 			<div class="img"></div>
-			<p><span>Lisa Chamberlain</span><br>is Julie's oldest sister. She is currently living in L.A. and working as an actress and singer. Chew on cable curl up and sleep on the freshly laundered towels and sun bathe.</p>
+			<p><span>Lisa Chamberlain</span><br>is Julie's oldest sister.She is currently living in L.A. and working as an actress and singer. Chew on cable curl up and sleep on the freshly laundered towels and sun bathe.</p>
 		</div>
 		<div class="img-container">
 			<div class="img"></div>
@@ -122,13 +122,22 @@
 				<td>Band Starts</td>
 			</tr>													
 		</table>
-		<h4>The Bride and Groom request that you dress in cocktail attire.</h4>
+		<h4>The Bride and Groom request that you dress in cocktail attire. The couple look forward to sharing a meal with all of their guests during this Christmas season.</h4>
 	</section>
 	<section id="location">
 		<h2>The Location</h2>
 		<hr>
-		<h4>Both Wedding and reception will be held at:<br><a href=""></a> Historic Wesley Center <br> 101 E Grant St. <br> Minneapolis, MN 55403</h4>
-		<h4><a href="https://www.google.com/maps/place/Historic+Wesley+Center/@44.9703045,-93.2766709,18z/data=!4m5!3m4!1s0x52b332be62e8ed03:0x2baee2edaffaa958!8m2!3d44.969572!4d-93.2760459">Directions To the Wesley Center</a></h4>
+		<h4>Both Wedding and reception will be held at:<br><a href="https://www.google.com/maps/place/Historic+Wesley+Center/@44.9703045,-93.2766709,18z/data=!4m5!3m4!1s0x52b332be62e8ed03:0x2baee2edaffaa958!8m2!3d44.969572!4d-93.2760459"> Historic Wesley Center<br> 101 E Grant St.<br> Minneapolis, MN 55403</a></h4>
+		<div id="map"></div>
+		<script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: { lat: 44.969572, lng: -93.2760459 },
+            zoom: 15
+        });
+      }
+     </script>
 	</section>
 	<footer>This is website was made by Ashleigh Adams</footer>
 </body>

@@ -20,34 +20,32 @@ header {
 
 header > ul { padding: .5em 0; }
 header > ul > li { padding: 0 .75em; }
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+section:nth-of-type(1) { padding-top: 46px; }
+
 footer	{
 	border: 1px solid silver;
 	font-size: 10px;
 	text-align: left;
 }
-section:nth-of-type(1) { padding-top: 46px; }
- h2 { padding-top: 46px; }
-h1 { color: #be0000; }
 
+
+h1 { color: #be0000; }
+h2 { padding-top: 46px; }
 h3 {
 	color: #fbf0f0;
 	font-size: 2.5em; 
 	font-family: 'Alex Brush', cursive; 
 	padding-top: 38%;
 }
-
 h3:nth-of-type(2) {
 	font-size: 2em; 
 	padding-top: 5%;
 	padding-left: 47%;
-}
-
-span {
-	font-size: 1em;
-	color: #be0000;
-	padding-left: 1em;
-	padding-right: .75em;
-	font-family: 'Alex Brush', cursive;
 }
 
 #intro > div { 
@@ -58,15 +56,18 @@ span {
 	margin-bottom: 5%;
 }
 
+
+
 #j-e > p, #parents-container > div > p {
 	margin: 5% 15%;
 }
-
 p {
 	border: 1px solid silver;
 	padding: 1em;
 	font-size: 1em;
 }
+
+
 
 /*IMAGES*/
 #bridesmaids > .img-container, #groomsmen  > .img-container { width: 350px; }
@@ -100,6 +101,12 @@ p {
 
 #bridesmaids > div, #groomsmen > div { display: inline-block; }
 
+#map { 
+	height: 50%; 
+	width: 50%; 
+	margin: 10% auto;
+}
+
 table {
 	border: 1px solid darkgrey;
 	margin: 2em auto;
@@ -110,17 +117,23 @@ tr:nth-child(odd) { background-color: #dce3e7; }
 td { padding: .5em 1em; }
 
 
-li {
-	list-style: none;
-	display: inline-block;
+span {
+	font-size: 1em;
+	color: #be0000;
+	padding-left: 1em;
+	padding-right: .75em;
+	font-family: 'Alex Brush', cursive;
 }
+
+
 
 a {
 	color: black;
 	text-decoration: none;
 }
-
 a:hover { color: #be0000; }
+
+
 
 hr { 
 	margin: 1em auto;
