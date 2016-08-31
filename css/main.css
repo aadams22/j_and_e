@@ -107,7 +107,7 @@ p {
 #map { 
 	height: 50%; 
 	width: 50%; 
-	margin: 10% auto;
+	margin: 6% auto;
 	border: 1px solid silver;
 }
 
@@ -136,7 +136,6 @@ a {
 	text-decoration: none;
 }
 a:hover { color: #be0000; }
-
 
 
 hr { 
