@@ -9,7 +9,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="./js/intro.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASzNw-prZz4_SEa1y2B4alg9JJRn9vm7A&callback=initMap" async defer></script>
 
 </head>
 <body>
@@ -129,15 +128,44 @@
 		<hr>
 		<h4>Both Wedding and reception will be held at:<br><a href="https://www.google.com/maps/place/Historic+Wesley+Center/@44.9703045,-93.2766709,18z/data=!4m5!3m4!1s0x52b332be62e8ed03:0x2baee2edaffaa958!8m2!3d44.969572!4d-93.2760459"> Historic Wesley Center<br> 101 E Grant St.<br> Minneapolis, MN 55403</a></h4>
 		<div id="map"></div>
-		<script>
+	   <script>
+	   	var wesleyLatLng = { lat: 44.969572, lng: -93.2760459 };
+
       function initMap() {
+	      var styledMapType = new google.maps.StyledMapType(
+      		[{"featureType":"administrative","elementType":"all","stylers":[{"hue":"#000000"},{"lightness":-100},{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"hue":"#dddddd"},{"saturation":-100},{"lightness":-3},{"visibility":"on"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"landscape.natural.terrain","elementType":"labels.text.fill","stylers":[{"hue":"#ffb200"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbbbbb"},{"saturation":-100},{"lightness":26},{"visibility":"on"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"transit","elementType":"labels","stylers":[{"hue":"#000000"},{"lightness":-100},{"visibility":"off"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"water","elementType":"labels","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]}]
+      	);
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
-            center: { lat: 44.969572, lng: -93.2760459 },
-            zoom: 15
+            center: wesleyLatLng,
+            zoom: 15,
+            mapTypeControlOptions: {
+            	mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain', 'styled_map']
+            }
         });
+        
+        map.mapTypes.set('styled_map', styledMapType);
+     		map.setMapTypeId('styled_map');
+
+     			var icon = {
+   									 	url: './img/marker.png', // url
+    									scaledSize: new google.maps.Size(30, 30), // scaled size
+    									origin: new google.maps.Point(0,0), // origin
+    									anchor: new google.maps.Point(0, 0) // anchor
+											};
+
+     		  var marker = new google.maps.Marker({
+    				position: wesleyLatLng,
+    				map: map,
+    				title: 'Wesley Event Center',
+						icon: icon
+  				});
+
+  			marker.setMap(map);
+
       }
      </script>
+     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASzNw-prZz4_SEa1y2B4alg9JJRn9vm7A&callback=initMap" async defer></script>
 	</section>
 	<footer>This is website was made by Ashleigh Adams</footer>
 </body>
