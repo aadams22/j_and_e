@@ -1,11 +1,8 @@
-// console.log('maps.js');
 $(function(){
 
 // Historic Wesley Center, 101 E Grant St., Minneapolis, MN 55403
 // lat:44.969572
 // lng:-93.2760459
-// GEOCODE_KEY=AIzaSyASzNw-prZz4_SEa1y2B4alg9JJRn9vm7A
-// KEY=AIzaSyBKWA1EBzil2kURhp1qlWC7O0H5rU1UKkE
 
 
 $.ajax({
@@ -36,12 +33,12 @@ function initMap() {
 
 function addMarkers(map) {
 
-		var	marker = new google.maps.Marker ({
-				    map: map,
-				    icon: '../img/favicon.jpg',
-				    position: { lat: 44.969572, lng: -93.2760459 },
-				    title: 'Wesley Event Center'
-				});
+    var marker = new google.maps.Marker ({
+            map: map,
+            icon: '../img/favicon.jpg',
+            position: { lat: 44.969572, lng: -93.2760459 },
+            title: 'Wesley Event Center'
+        });
 
   } 
 
